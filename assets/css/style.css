@@ -21,26 +21,77 @@ main {
 aside {
     display: flex;
     flex-direction: column;
-    margin-left: 30px;
-    padding-top: 30px;
+    padding: 30px;
     width: 15%;
     border-right: 3px solid black;
     height: 750px;
 }
 
-#search {
+nav {
+    display: flex;
+    /* justify-content: space-between; */
+    flex-direction: column;
+    height: 150px;
+}
 
+#search {
+    margin-top: 30px;
+    height: 45px;
+    padding: 5px;
+}
+
+#sbtn {
+    margin-top: 20px;
+    height: 25px;
+}
+
+#previous {
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 1px solid black;
 }
 
 section {
     display: flex;
     flex-direction: column;
-    margin-top: 30px;
-    margin-left: 30px;
+    margin: 30px;
+    width: 85%;
 }
 
-#location {
+#current {
     display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     border: 1px solid black;
-    width: 1250px;
+    padding: 10px;
+    width: 1375px;
+    height: 250px;
+    margin-bottom: 30px;
+    background-color: lightgray;
+    color: white;
+}
+
+#forecast {
+    display: flex;
+    flex-direction: column;
+}
+
+#forecast ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: space-between;
+    margin-top: 30px;
+}
+
+#forecast li {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    list-style-type: none;
+    padding: 10px;
+    height: 150px;
+    width: 15%;
+    border: 1px solid black;
+    background-color: lightgray;
+    color: white;
 }

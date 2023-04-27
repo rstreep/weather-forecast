@@ -1,37 +1,45 @@
+// selector for search button
 var searchBtn = document.querySelector('#sbtn');
+// api key
 var apiKey = 'd06c614cd8de208c5d08d01ece9a659b';
+// variables for current weather
 var currentLocation = document.querySelector('#currentTitle');
 var currentIcon = document.querySelector('#currentIcon');
 var currentTemp = document.querySelector('#currentTemp');
 var currentWind = document.querySelector('#currentWind');
 var currentHumidity = document.querySelector('#currentHumidity');
+// variables for day 1 of weather forecast
 var day1Date = document.querySelector('#day1Date');
 var day1Icon = document.querySelector('#day1Icon');
 var day1Temp = document.querySelector('#day1Temp');
 var day1Wind = document.querySelector('#day1Wind');
 var day1Humidity = document.querySelector('#day1Humidity');
+// variables for day 2 of weather forecast
 var day2Date = document.querySelector('#day2Date');
 var day2Icon = document.querySelector('#day2Icon');
 var day2Temp = document.querySelector('#day2Temp');
 var day2Wind = document.querySelector('#day2Wind');
 var day2Humidity = document.querySelector('#day2Humidity');
+// variables for day 3 of weather forecast
 var day3Date = document.querySelector('#day3Date');
 var day3Icon = document.querySelector('#day3Icon');
 var day3Temp = document.querySelector('#day3Temp');
 var day3Wind = document.querySelector('#day3Wind');
 var day3Humidity = document.querySelector('#day3Humidity');
+// variables for day 4 of weather forecast
 var day4Date = document.querySelector('#day4Date');
 var day4Icon = document.querySelector('#day4Icon');
 var day4Temp = document.querySelector('#day4Temp');
 var day4Wind = document.querySelector('#day4Wind');
 var day4Humidity = document.querySelector('#day4Humidity');
+// variables for day 5 of weather forecast
 var day5Date = document.querySelector('#day5Date');
 var day5Icon = document.querySelector('#day5Icon');
 var day5Temp = document.querySelector('#day5Temp');
 var day5Wind = document.querySelector('#day5Wind');
 var day5Humidity = document.querySelector('#day5Humidity');
 
-
+// event listener on search button that fetches api and renders results
 searchBtn.onclick = async function() {
     while(currentIcon.firstChild) {
         currentIcon.firstChild.remove();
@@ -69,7 +77,7 @@ searchBtn.onclick = async function() {
     renderDay4(day4);
     renderDay5(day5);
 } 
-
+// renders current day weather
 function renderCurrent(today) {
     currentLocation.innerText = today.name;
     var img = new Image()
@@ -80,6 +88,7 @@ function renderCurrent(today) {
     currentWind.innerText = "Wind: " + today.wind.speed + "mph";
     currentHumidity.innerText = "Humidity: " + today.main.humidity + "%";
 }
+// renders day 1 of weather forecast
 function renderDay1(day1) {
     day1Date.innerText = day1.dt_txt;
     var img = new Image()
@@ -90,7 +99,7 @@ function renderDay1(day1) {
     day1Wind.innerText = "Wind: " + day1.wind.speed + "mph";
     day1Humidity.innerText = "Humidity: " + day1.main.humidity + "%";
  }
-
+// renders 2 of weather forecast
  function renderDay2(day2) {
     day2Date.innerText = day2.dt_txt;
     var img = new Image()
@@ -101,7 +110,7 @@ function renderDay1(day1) {
     day2Wind.innerText = "Wind: " + day2.wind.speed + "mph";
     day2Humidity.innerText = "Humidity: " + day2.main.humidity + "%";
  }
-
+// renders 3 of weather forecast
  function renderDay3(day3) {
     day3Date.innerText = day3.dt_txt;
     var img = new Image()
@@ -112,7 +121,7 @@ function renderDay1(day1) {
     day3Wind.innerText = "Wind: " + day3.wind.speed + "mph";
     day3Humidity.innerText = "Humidity: " + day3.main.humidity + "%";
  }
-
+// renders 4 of weather forecast
  function renderDay4(day4) {
     day4Date.innerText = day4.dt_txt;
     var img = new Image()
@@ -123,7 +132,7 @@ function renderDay1(day1) {
     day4Wind.innerText = "Wind: " + day4.wind.speed + "mph";
     day4Humidity.innerText = "Humidity: " + day4.main.humidity + "%";
  }
-
+// renders 5 of weather forecast
  function renderDay5(day5) {
     day5Date.innerText = day5.dt_txt;
     var img = new Image()

@@ -17,10 +17,15 @@ https://github.com/rstreep/weather-forecast/blob/main/assets/images/html2.png?ra
 ### CSS:
 
 https://github.com/rstreep/weather-forecast/blob/main/assets/images/css1.png?raw=true
+https://github.com/rstreep/weather-forecast/blob/main/assets/images/css2.png?raw=true
+https://github.com/rstreep/weather-forecast/blob/main/assets/images/css3.png?raw=true
 
 ### JS:
 
-
+https://github.com/rstreep/weather-forecast/blob/main/assets/images/js1.png?raw=true
+https://github.com/rstreep/weather-forecast/blob/main/assets/images/js2.png?raw=true
+https://github.com/rstreep/weather-forecast/blob/main/assets/images/js3.png?raw=true
+https://github.com/rstreep/weather-forecast/blob/main/assets/images/js4.png?raw=true
 
 ## Published Site
 https://rstreep.github.io/weather-forecast/

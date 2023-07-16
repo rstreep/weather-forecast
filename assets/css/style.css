@@ -51,6 +51,16 @@ nav {
     border-top: 1px solid black;
 }
 
+#previous li {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#previous li:hover {
+    color: blue ;
+    cursor: pointer;
+}
+
 section {
     display: flex;
     flex-direction: column;

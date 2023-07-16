@@ -1,5 +1,6 @@
 // selector for search button
 var searchBtn = document.querySelector('#sbtn');
+var savedSearches = document.querySelector('#previous');
 // api key
 var apiKey = 'd06c614cd8de208c5d08d01ece9a659b';
 // variables for current weather
@@ -76,6 +77,8 @@ searchBtn.onclick = async function() {
     renderDay3(day3);
     renderDay4(day4);
     renderDay5(day5);
+
+    saveSearch(userInput);
 } 
 // renders current day weather
 function renderCurrent(today) {
@@ -142,6 +145,24 @@ function renderDay1(day1) {
     day5Temp.innerText = "Temp: " + day5.main.temp + "°F";
     day5Wind.innerText = "Wind: " + day5.wind.speed + "mph";
     day5Humidity.innerText = "Humidity: " + day5.main.humidity + "%";
+ }
+
+ function saveSearch(city) {
+
+   var existingSearch = savedSearches.getElementsByTagName('li');
+   for (var i = 0; i < existingSearch.length; i++) {
+      if (existingSearch[i].innerText === city) {
+         return;
+      }
+   }
+
+   var listItem = document.createElement('li');
+   listItem.innerText = city;
+   savedSearches.appendChild(listItem);
+   listItem.addEventListener('click', function () {
+      document.getElementById('search').value = city;
+      searchBtn.click();
+   });
  }
  
 
